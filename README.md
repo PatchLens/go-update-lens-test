@@ -1,2 +1,3 @@
-# mod-update-sense-testing
-Test projects for mod-update-sense
+# go-update-lens-test
+
+Fake test projects for go module update testing.
