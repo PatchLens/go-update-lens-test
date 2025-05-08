@@ -119,6 +119,21 @@ func TestCSV(t *testing.T) {
 	})
 }
 
+func TestUpdateFail(t *testing.T) {
+	tmpFile, m := makeTestMap(t)
+	defer os.Remove(tmpFile)
+
+	require.NoError(t, SetCSV(m, "zero", TestStruct{
+		Map:       map[string]TestStruct{"foo": {}},
+		MapIntKey: map[int]string{0: "foo", 1: "1", 2: ""},
+	}))
+	require.NoError(t, m.Commit())
+
+	stat, err := os.Stat(tmpFile)
+	require.NoError(t, err)
+	assert.Equal(t, int64(254), stat.Size())
+}
+
 type TestStruct struct {
 	Value     string
 	ID        int
