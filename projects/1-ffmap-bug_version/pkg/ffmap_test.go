@@ -37,12 +37,16 @@ func TestOpenCommit(t *testing.T) {
 
 func TestCSV(t *testing.T) {
 	t.Run("set", func(t *testing.T) {
+		t.Parallel()
+
 		tmpFile, m := makeTestMap(t)
 		defer os.Remove(tmpFile)
 
 		require.NoError(t, SetCSV(m, "foo", "bar"))
 	})
 	t.Run("get", func(t *testing.T) {
+		t.Parallel()
+
 		tmpFile, m := makeTestMap(t)
 		defer os.Remove(tmpFile)
 
@@ -50,18 +54,24 @@ func TestCSV(t *testing.T) {
 		require.False(t, ok)
 	})
 	t.Run("size", func(t *testing.T) {
+		t.Parallel()
+
 		tmpFile, m := makeTestMap(t)
 		defer os.Remove(tmpFile)
 
 		require.Equal(t, 0, SizeCSV(m))
 	})
 	t.Run("commit", func(t *testing.T) {
+		t.Parallel()
+
 		tmpFile, m := makeTestMap(t)
 		defer os.Remove(tmpFile)
 
 		require.NoError(t, CommitCSV(m))
 	})
 	t.Run("set_get_zero_int", func(t *testing.T) {
+		t.Parallel()
+
 		tmpFile, m := makeTestMap(t)
 		defer os.Remove(tmpFile)
 
@@ -72,6 +82,8 @@ func TestCSV(t *testing.T) {
 		assert.Equal(t, 0, val)
 	})
 	t.Run("set_get_zero_str", func(t *testing.T) {
+		t.Parallel()
+
 		tmpFile, m := makeTestMap(t)
 		defer os.Remove(tmpFile)
 
@@ -82,6 +94,8 @@ func TestCSV(t *testing.T) {
 		assert.Equal(t, "", val)
 	})
 	t.Run("set_get_zero_map", func(t *testing.T) {
+		t.Parallel()
+
 		tmpFile, m := makeTestMap(t)
 		defer os.Remove(tmpFile)
 
@@ -94,6 +108,8 @@ func TestCSV(t *testing.T) {
 		assert.Equal(t, zMap, val)
 	})
 	t.Run("set_get_zero_field_struct", func(t *testing.T) {
+		t.Parallel()
+
 		tmpFile, m := makeTestMap(t)
 		defer os.Remove(tmpFile)
 
@@ -120,6 +136,8 @@ func TestCSV(t *testing.T) {
 }
 
 func TestUpdateFail(t *testing.T) {
+	t.Parallel()
+
 	tmpFile, m := makeTestMap(t)
 	defer os.Remove(tmpFile)
 
@@ -145,6 +163,8 @@ type TestStruct struct {
 }
 
 func TestOperateCSV(t *testing.T) {
+	t.Parallel()
+
 	tmpFile, m := makeTestMap(t)
 	defer os.Remove(tmpFile)
 
@@ -152,6 +172,8 @@ func TestOperateCSV(t *testing.T) {
 }
 
 func TestOperateWriteCSV(t *testing.T) {
+	t.Parallel()
+
 	tmpFile, m := makeTestMap(t)
 	defer os.Remove(tmpFile)
 
@@ -159,6 +181,8 @@ func TestOperateWriteCSV(t *testing.T) {
 }
 
 func TestOperateReadCSV(t *testing.T) {
+	t.Parallel()
+
 	tmpFile, m := makeTestMap(t)
 	defer os.Remove(tmpFile)
 
@@ -166,6 +190,8 @@ func TestOperateReadCSV(t *testing.T) {
 }
 
 func TestInterface(t *testing.T) {
+	t.Parallel()
+
 	t.Run("set", func(t *testing.T) {
 		tmpFile, m := makeTestMap(t)
 		defer os.Remove(tmpFile)
@@ -194,6 +220,8 @@ func TestInterface(t *testing.T) {
 }
 
 func TestOperateInterface(t *testing.T) {
+	t.Parallel()
+
 	tmpFile, m := makeTestMap(t)
 	defer os.Remove(tmpFile)
 
@@ -201,6 +229,8 @@ func TestOperateInterface(t *testing.T) {
 }
 
 func TestOperateWriteInterface(t *testing.T) {
+	t.Parallel()
+
 	tmpFile, m := makeTestMap(t)
 	defer os.Remove(tmpFile)
 
@@ -208,8 +238,41 @@ func TestOperateWriteInterface(t *testing.T) {
 }
 
 func TestOperateReadInterface(t *testing.T) {
+	t.Parallel()
+
 	tmpFile, m := makeTestMap(t)
 	defer os.Remove(tmpFile)
 
 	OperateReadInterface(m)
+}
+
+// Tests for unique function structures
+
+func TestContainsSetCSV(t *testing.T) {
+	t.Parallel()
+
+	tmpFile, m := makeTestMap(t)
+	defer os.Remove(tmpFile)
+
+	// isolated test due to unique double call behavior
+	contains, err := ContainsSetCSV(m, "zero", TestStruct{
+		Map:       map[string]TestStruct{"foo": {}},
+		MapIntKey: map[int]string{0: "foo", 1: "1", 2: ""},
+	})
+	assert.False(t, contains)
+	require.NoError(t, err)
+}
+
+func TestRecursiveCSVSet(t *testing.T) {
+	t.Parallel()
+
+	tmpFile, m := makeTestMap(t)
+	defer os.Remove(tmpFile)
+
+	// isolated test due to unique double call behavior
+	err := RecursiveCSVSet(m, "zero", TestStruct{
+		Map:       map[string]TestStruct{"foo": {}},
+		MapIntKey: map[int]string{0: "foo", 1: "1", 2: ""},
+	}, 10)
+	require.NoError(t, err)
 }

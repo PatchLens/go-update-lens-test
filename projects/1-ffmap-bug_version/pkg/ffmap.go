@@ -16,6 +16,10 @@ func SetInterface(kv ffmap.MutableFFMap, key, value string) error {
 	return kv.Set(key, value)
 }
 
+func ContainsCSV(kv *ffmap.KeyValueCSV, key string) bool {
+	return kv.ContainsKey(key)
+}
+
 func GetStrCSV(kv *ffmap.KeyValueCSV, key string) (string, bool) {
 	var value string
 	ok := GetAnyCSV(kv, key, &value)
@@ -97,4 +101,18 @@ func OperateWriteInterface(kv ffmap.MutableFFMap) {
 func OperateReadInterface(kv ffmap.MutableFFMap) {
 	_, _ = GetInterface(kv, "foo:i")
 	_ = SizeInterface(kv)
+}
+
+// Special function designs below
+
+func ContainsSetCSV(kv *ffmap.KeyValueCSV, key string, value any) (bool, error) {
+	// two calls on return, one within this file, one to module
+	return ContainsCSV(kv, key), kv.Set(key, value)
+}
+
+func RecursiveCSVSet(kv *ffmap.KeyValueCSV, key string, value any, count int) error {
+	if count > 0 {
+		return RecursiveCSVSet(kv, key, value, count-1)
+	}
+	return kv.Set(key, value)
 }
