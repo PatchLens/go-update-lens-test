@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: "gomod"
+    directory: "/projects/1-ffmap-bug_version"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "gomod"
+    directory: "/projects/2-charts-svg_optimization"
+    schedule:
+      interval: "daily"
