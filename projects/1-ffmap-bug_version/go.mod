@@ -3,7 +3,7 @@ module test
 go 1.24.2
 
 require (
-	github.com/go-analyze/flat-file-map v0.3.2
+	github.com/go-analyze/flat-file-map v0.3.8
 	github.com/stretchr/testify v1.11.1
 )
 
