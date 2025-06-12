@@ -1,0 +1,150 @@
+{
+  "generated_at": "2025-06-12T05:03:30.676921113Z",
+  "run_duration_ms": 363365,
+  "analysis_duration_ms": 11080,
+  "field_check_duration_ms": 17511,
+  "mutation_duration_ms": 334698,
+  "module": {
+    "root_module_name": "github.com/go-analyze/charts",
+    "root_module_start_version": "v0.4.10",
+    "root_module_update_version": "v0.5.13",
+    "changed_modules": [
+      "github.com/go-analyze/charts",
+      "golang.org/x/image"
+    ],
+    "changed_module_count": 2,
+    "changed_function_count": 80,
+    "reachable_changed_functions": [
+      "github.com/go-analyze/charts:*funnelChart.Render",
+      "github.com/go-analyze/charts:NewSeriesListLine",
+      "github.com/go-analyze/charts/chartdraw/drawing:Color.StringRGBA",
+      "github.com/go-analyze/charts/chartdraw/drawing:ColorFromKnown",
+      "github.com/go-analyze/charts:*lineChart.Render",
+      "github.com/go-analyze/charts:fillThemeDefaults",
+      "github.com/go-analyze/charts:NewMarkLine",
+      "github.com/go-analyze/charts:*axisPainter.Render",
+      "github.com/go-analyze/charts:*seriesLabelPainter.Add",
+      "github.com/go-analyze/charts:*themeColorPalette.GetSeriesColor",
+      "github.com/go-analyze/charts:*barChart.Render",
+      "github.com/go-analyze/charts:NewPainter",
+      "github.com/go-analyze/charts:EChartsSeriesList.ToSeriesList",
+      "github.com/go-analyze/charts:newSector",
+      "github.com/go-analyze/charts:*ChartOption.fillDefault",
+      "github.com/go-analyze/charts:*EChartsOption.ToOption",
+      "github.com/go-analyze/charts:*Painter.multiText",
+      "github.com/go-analyze/charts:newSeriesLabelPainter",
+      "github.com/go-analyze/charts/chartdraw:*vectorRenderer.ArcTo",
+      "github.com/go-analyze/charts:*LegendOption.IsEmpty",
+      "github.com/go-analyze/charts:Render",
+      "github.com/go-analyze/charts:textRotationHeightAdjustment",
+      "github.com/go-analyze/charts:*pieChart.Render",
+      "github.com/go-analyze/charts:*EChartsMarkPoint.ToSeriesMarkPoint",
+      "github.com/go-analyze/charts/chartdraw:*rasterRenderer.Circle",
+      "github.com/go-analyze/charts:NewBox",
+      "github.com/go-analyze/charts:*radarChart.Render",
+      "github.com/go-analyze/charts:*legendPainter.Render",
+      "github.com/go-analyze/charts:*YAxisOption.toAxisOption",
+      "github.com/go-analyze/charts:labelFormatValue",
+      "github.com/go-analyze/charts:labelFormatFunnel",
+      "github.com/go-analyze/charts/chartdraw:*rasterRenderer.Save",
+      "github.com/go-analyze/charts/chartdraw:*vectorRenderer.Circle",
+      "github.com/go-analyze/charts:*markLinePainter.Render",
+      "github.com/go-analyze/charts:*markPointPainter.Render",
+      "github.com/go-analyze/charts/chartdraw/drawing:Color.String",
+      "github.com/go-analyze/charts:NewMarkPoint",
+      "github.com/go-analyze/charts:*markPointPainter.add",
+      "github.com/go-analyze/charts/chartdraw:*vectorRenderer.MeasureText",
+      "github.com/go-analyze/charts:newLabelFormatter",
+      "github.com/go-analyze/charts:*Painter.ticks",
+      "github.com/go-analyze/charts:*tableChart.render",
+      "github.com/go-analyze/charts:*XAxisOption.toAxisOption",
+      "github.com/go-analyze/charts:*EChartsMarkLine.ToSeriesMarkLine",
+      "github.com/go-analyze/charts:*titlePainter.Render",
+      "github.com/go-analyze/charts:*markLinePainter.add",
+      "github.com/go-analyze/charts:*horizontalBarChart.Render",
+      "github.com/go-analyze/charts:labelFormatPie",
+      "github.com/go-analyze/charts:summarizePopulationData",
+      "github.com/go-analyze/charts:*Painter.Child",
+      "github.com/go-analyze/charts:NewLineChartOptionWithData",
+      "github.com/go-analyze/charts:*EChartsPadding.UnmarshalJSON",
+      "github.com/go-analyze/charts:normalizeAngle",
+      "github.com/go-analyze/charts/chartdraw:PNG",
+      "github.com/go-analyze/charts/chartdraw:*rasterRenderer.MeasureText",
+      "github.com/go-analyze/charts:defaultRender",
+      "github.com/go-analyze/charts:*Painter.legendLineDot"
+    ],
+    "reachable_changed_function_count": 57
+  },
+  "validation": {
+    "relevant_project_functions": [
+      "test/pkg:parseFStopMM",
+      "test/pkg:PopulateData",
+      "test/pkg:WritePainter",
+      "test/pkg:RenderLineChart",
+      "test/pkg:RenderCustomText"
+    ],
+    "relevant_project_function_count": 5,
+    "relevant_test_functions": [
+      "test/pkg:TestRenderCustomTextSizeFail",
+      "test/pkg:TestRenderLineChartSizeFail",
+      "test/pkg:TestRenderCustomTextBasic",
+      "test/pkg:TestRenderLineChartBasic"
+    ],
+    "relevant_test_function_count": 4,
+    "project_field_check_point_count": 56,
+    "module_change_hit_in_test_count": 25,
+    "test_field_match_count": 50756,
+    "test_field_diff_count": 132,
+    "generated_test_function_count": 0,
+    "mutation_count": 585,
+    "mutations_squashed": 505,
+    "test_details": [
+      {
+        "test_function_ident": "test/pkg:TestRenderCustomTextBasic",
+        "test_function_name": "TestRenderCustomTextBasic",
+        "baseline_failure": false,
+        "pass_regression": false,
+        "diff_field_count": 8,
+        "module_change_hit_count": 3,
+        "field_changes": {}
+      },
+      {
+        "test_function_ident": "test/pkg:TestRenderCustomTextSizeFail",
+        "test_function_name": "TestRenderCustomTextSizeFail",
+        "baseline_failure": false,
+        "pass_regression": false,
+        "diff_field_count": 8,
+        "module_change_hit_count": 3,
+        "field_changes": {}
+      },
+      {
+        "test_function_ident": "test/pkg:TestRenderLineChartBasic",
+        "test_function_name": "TestRenderLineChartBasic",
+        "baseline_failure": false,
+        "pass_regression": false,
+        "diff_field_count": 58,
+        "module_change_hit_count": 25,
+        "field_changes": {
+          "test/pkg:RenderLineChart": {
+            "opt.FillArea": "@@ -1 +1 @@\n-false\n+<nil>",
+            "p.render.b.buf": "<VALUES TOO LARGE>"
+          }
+        }
+      },
+      {
+        "test_function_ident": "test/pkg:TestRenderLineChartSizeFail",
+        "test_function_name": "TestRenderLineChartSizeFail",
+        "baseline_failure": false,
+        "pass_regression": false,
+        "diff_field_count": 58,
+        "module_change_hit_count": 25,
+        "field_changes": {
+          "test/pkg:RenderLineChart": {
+            "opt.FillArea": "@@ -1 +1 @@\n-false\n+<nil>",
+            "p.render.b.buf": "<VALUES TOO LARGE>"
+          }
+        }
+      }
+    ]
+  }
+}
