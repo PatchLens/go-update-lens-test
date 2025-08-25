@@ -4,7 +4,7 @@ go 1.24.2
 
 require (
 	github.com/go-analyze/charts v0.4.10
-	github.com/stretchr/testify v1.10.0
+	github.com/stretchr/testify v1.11.0
 )
 
 require (
