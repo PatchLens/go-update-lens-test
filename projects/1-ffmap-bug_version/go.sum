@@ -1,7 +1,7 @@
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/go-analyze/flat-file-map v0.3.2 h1:iMutoAlJP3/PHpKVfvJCxGcOcvz1tIyVt5Gyryt+Qm8=
-github.com/go-analyze/flat-file-map v0.3.2/go.mod h1:x9RLPYKN9x0NxaEP/g16I9EoiNN2AXRSU1EeMmjuEaw=
+github.com/go-analyze/flat-file-map v0.3.8 h1:dvAOXhEBnwPis6JYil4SDdKsjNgrcGe5J/9yvbEzdbY=
+github.com/go-analyze/flat-file-map v0.3.8/go.mod h1:lX9GD3ZNnlv7k8Jtw5lB9LJ24kY69i6qstBbL7o8QRo=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/stretchr/testify v1.11.1 h1:7s2iGBzp5EwR7/aIZr8ao5+dra3wiQyKjjFuvgVKu7U=
