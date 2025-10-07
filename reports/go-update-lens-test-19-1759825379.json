@@ -1,0 +1,359 @@
+{
+  "generated_at": "2025-10-07T08:21:52.302021597Z",
+  "run_duration_ms": 66957,
+  "analysis_duration_ms": 1641,
+  "field_check_duration_ms": 37739,
+  "mutation_duration_ms": 25160,
+  "module": {
+    "root_module_name": "github.com/go-analyze/flat-file-map",
+    "root_module_start_version": "v0.3.2",
+    "root_module_update_version": "v0.4.1",
+    "changed_modules": [
+      "github.com/go-analyze/flat-file-map"
+    ],
+    "changed_module_count": 1,
+    "changed_function_count": 13,
+    "reachable_changed_functions": [
+      "github.com/go-analyze/flat-file-map/ffmap:encodeValue",
+      "github.com/go-analyze/flat-file-map/ffmap:*KeyValueCSV.Set",
+      "github.com/go-analyze/flat-file-map/ffmap:decodeValue",
+      "github.com/go-analyze/flat-file-map/ffmap:OpenCSV",
+      "github.com/go-analyze/flat-file-map/ffmap:*KeyValueCSV.loadRecords",
+      "github.com/go-analyze/flat-file-map/ffmap:*KeyValueCSV.Commit",
+      "github.com/go-analyze/flat-file-map/ffmap:*KeyValueCSV.ContainsKey",
+      "github.com/go-analyze/flat-file-map/ffmap:*KeyValueCSV.Get",
+      "github.com/go-analyze/flat-file-map/ffmap:*KeyValueCSV.Size",
+      "github.com/go-analyze/flat-file-map/ffmap:*KeyValueCSV.loadFromDisk"
+    ],
+    "reachable_changed_function_count": 10
+  },
+  "validation": {
+    "relevant_project_functions": [
+      "test/pkg:CommitInterface",
+      "test/pkg:SizeCSV",
+      "test/pkg:GetIntCSV",
+      "test/pkg:OperateWriteCSV",
+      "test/pkg:ContainsCSV",
+      "test/pkg:GetStrCSV",
+      "test/pkg:SetCSV",
+      "test/pkg:OperateCSV",
+      "test/pkg:OperateInterface",
+      "test/pkg:RecursiveCSVSet",
+      "test/pkg:CommitCSV",
+      "test/pkg:ContainsSetCSV",
+      "test/pkg:GetAnyCSV",
+      "test/pkg:OperateReadCSV",
+      "test/pkg:SetInterface",
+      "test/pkg:OperateWriteInterface",
+      "test/pkg:GetInterface",
+      "test/pkg:SizeInterface",
+      "test/pkg:OperateReadInterface",
+      "test/pkg:Open"
+    ],
+    "relevant_project_function_count": 20,
+    "relevant_test_functions": [
+      "test/pkg:TestCSV",
+      "test/pkg:TestOperateWriteCSV",
+      "test/pkg:TestContainsSetCSV",
+      "test/pkg:TestOperateInterface",
+      "test/pkg:TestOperateReadInterface",
+      "test/pkg:TestOpenCommit",
+      "test/pkg:TestOperateCSV",
+      "test/pkg:TestOperateReadCSV",
+      "test/pkg:TestOperateWriteInterface",
+      "test/pkg:TestOpen",
+      "test/pkg:TestRecursiveCSVSet",
+      "test/pkg:TestUpdateFail",
+      "test/pkg:TestInterface"
+    ],
+    "relevant_test_function_count": 13,
+    "project_field_check_point_count": 84,
+    "module_change_hit_in_test_count": 10,
+    "test_field_match_count": 486,
+    "test_field_diff_count": 1025,
+    "generated_test_function_count": 0,
+    "mutation_count": 34,
+    "mutations_squashed": 20,
+    "performance_changes": [
+      {
+        "test_function_ident": "test/pkg:TestCSV",
+        "test_function_name": "TestCSV",
+        "caller_ident": "test/pkg:CommitCSV",
+        "time_diff_ms": -9,
+        "pre_time_ms": 16,
+        "post_time_ms": 7
+      },
+      {
+        "test_function_ident": "test/pkg:TestCSV",
+        "test_function_name": "TestCSV",
+        "caller_ident": "test/pkg:GetAnyCSV",
+        "time_diff_ms": -3,
+        "pre_time_ms": 5,
+        "post_time_ms": 2
+      },
+      {
+        "test_function_ident": "test/pkg:TestCSV",
+        "test_function_name": "TestCSV",
+        "caller_ident": "test/pkg:GetIntCSV",
+        "time_diff_ms": -3,
+        "pre_time_ms": 5,
+        "post_time_ms": 2
+      },
+      {
+        "test_function_ident": "test/pkg:TestCSV",
+        "test_function_name": "TestCSV",
+        "caller_ident": "test/pkg:GetStrCSV",
+        "time_diff_ms": -7,
+        "pre_time_ms": 13,
+        "post_time_ms": 6
+      },
+      {
+        "test_function_ident": "test/pkg:TestCSV",
+        "test_function_name": "TestCSV",
+        "caller_ident": "test/pkg:Open",
+        "time_diff_ms": -3,
+        "pre_time_ms": 4,
+        "post_time_ms": 1
+      },
+      {
+        "test_function_ident": "test/pkg:TestCSV",
+        "test_function_name": "TestCSV",
+        "caller_ident": "test/pkg:SetCSV",
+        "time_diff_ms": -3,
+        "pre_time_ms": 3,
+        "post_time_ms": 0
+      },
+      {
+        "test_function_ident": "test/pkg:TestCSV",
+        "test_function_name": "TestCSV",
+        "caller_ident": "test/pkg:SizeCSV",
+        "time_diff_ms": -8,
+        "pre_time_ms": 15,
+        "post_time_ms": 7
+      },
+      {
+        "test_function_ident": "test/pkg:TestContainsSetCSV",
+        "test_function_name": "TestContainsSetCSV",
+        "caller_ident": "test/pkg:ContainsSetCSV",
+        "time_diff_ms": -2,
+        "pre_time_ms": 3,
+        "post_time_ms": 1
+      },
+      {
+        "test_function_ident": "test/pkg:TestInterface",
+        "test_function_name": "TestInterface",
+        "caller_ident": "test/pkg:GetInterface",
+        "time_diff_ms": -5,
+        "pre_time_ms": 7,
+        "post_time_ms": 2
+      },
+      {
+        "test_function_ident": "test/pkg:TestInterface",
+        "test_function_name": "TestInterface",
+        "caller_ident": "test/pkg:Open",
+        "time_diff_ms": -2,
+        "pre_time_ms": 3,
+        "post_time_ms": 1
+      },
+      {
+        "test_function_ident": "test/pkg:TestInterface",
+        "test_function_name": "TestInterface",
+        "caller_ident": "test/pkg:SetInterface",
+        "time_diff_ms": -3,
+        "pre_time_ms": 4,
+        "post_time_ms": 1
+      },
+      {
+        "test_function_ident": "test/pkg:TestInterface",
+        "test_function_name": "TestInterface",
+        "caller_ident": "test/pkg:SizeInterface",
+        "time_diff_ms": -7,
+        "pre_time_ms": 9,
+        "post_time_ms": 2
+      },
+      {
+        "test_function_ident": "test/pkg:TestInterface",
+        "test_function_name": "TestInterface",
+        "caller_ident": "test/pkg:CommitInterface",
+        "time_diff_ms": -8,
+        "pre_time_ms": 11,
+        "post_time_ms": 3
+      },
+      {
+        "test_function_ident": "test/pkg:TestOperateCSV",
+        "test_function_name": "TestOperateCSV",
+        "caller_ident": "test/pkg:OperateWriteCSV",
+        "time_diff_ms": -2,
+        "pre_time_ms": 3,
+        "post_time_ms": 1
+      },
+      {
+        "test_function_ident": "test/pkg:TestOperateReadCSV",
+        "test_function_name": "TestOperateReadCSV",
+        "caller_ident": "test/pkg:GetStrCSV",
+        "time_diff_ms": -2,
+        "pre_time_ms": 3,
+        "post_time_ms": 1
+      },
+      {
+        "test_function_ident": "test/pkg:TestOperateReadInterface",
+        "test_function_name": "TestOperateReadInterface",
+        "caller_ident": "test/pkg:OperateReadInterface",
+        "time_diff_ms": -2,
+        "pre_time_ms": 3,
+        "post_time_ms": 1
+      },
+      {
+        "test_function_ident": "test/pkg:TestOperateReadInterface",
+        "test_function_name": "TestOperateReadInterface",
+        "caller_ident": "test/pkg:SizeInterface",
+        "time_diff_ms": -2,
+        "pre_time_ms": 3,
+        "post_time_ms": 1
+      },
+      {
+        "test_function_ident": "test/pkg:TestOperateWriteCSV",
+        "test_function_name": "TestOperateWriteCSV",
+        "caller_ident": "test/pkg:OperateWriteCSV",
+        "time_diff_ms": -2,
+        "pre_time_ms": 3,
+        "post_time_ms": 1
+      },
+      {
+        "test_function_ident": "test/pkg:TestRecursiveCSVSet",
+        "test_function_name": "TestRecursiveCSVSet",
+        "caller_ident": "test/pkg:RecursiveCSVSet",
+        "time_diff_ms": -2,
+        "pre_time_ms": 3,
+        "post_time_ms": 1
+      },
+      {
+        "test_function_ident": "test/pkg:TestUpdateFail",
+        "test_function_name": "TestUpdateFail",
+        "caller_ident": "test/pkg:SetCSV",
+        "time_diff_ms": -2,
+        "pre_time_ms": 3,
+        "post_time_ms": 1
+      }
+    ],
+    "test_details": [
+      {
+        "test_function_ident": "test/pkg:TestCSV",
+        "test_function_name": "TestCSV",
+        "baseline_failure": false,
+        "pass_regression": false,
+        "diff_field_count": 310,
+        "module_change_hit_count": 9,
+        "field_changes": {}
+      },
+      {
+        "test_function_ident": "test/pkg:TestContainsSetCSV",
+        "test_function_name": "TestContainsSetCSV",
+        "baseline_failure": false,
+        "pass_regression": false,
+        "diff_field_count": 35,
+        "module_change_hit_count": 6,
+        "field_changes": {}
+      },
+      {
+        "test_function_ident": "test/pkg:TestInterface",
+        "test_function_name": "TestInterface",
+        "baseline_failure": false,
+        "pass_regression": false,
+        "diff_field_count": 90,
+        "module_change_hit_count": 8,
+        "field_changes": {}
+      },
+      {
+        "test_function_ident": "test/pkg:TestOpen",
+        "test_function_name": "TestOpen",
+        "baseline_failure": false,
+        "pass_regression": false,
+        "diff_field_count": 11,
+        "module_change_hit_count": 3,
+        "field_changes": {}
+      },
+      {
+        "test_function_ident": "test/pkg:TestOpenCommit",
+        "test_function_name": "TestOpenCommit",
+        "baseline_failure": false,
+        "pass_regression": false,
+        "diff_field_count": 11,
+        "module_change_hit_count": 4,
+        "field_changes": {}
+      },
+      {
+        "test_function_ident": "test/pkg:TestOperateCSV",
+        "test_function_name": "TestOperateCSV",
+        "baseline_failure": false,
+        "pass_regression": false,
+        "diff_field_count": 115,
+        "module_change_hit_count": 9,
+        "field_changes": {}
+      },
+      {
+        "test_function_ident": "test/pkg:TestOperateInterface",
+        "test_function_name": "TestOperateInterface",
+        "baseline_failure": false,
+        "pass_regression": false,
+        "diff_field_count": 102,
+        "module_change_hit_count": 9,
+        "field_changes": {}
+      },
+      {
+        "test_function_ident": "test/pkg:TestOperateReadCSV",
+        "test_function_name": "TestOperateReadCSV",
+        "baseline_failure": false,
+        "pass_regression": false,
+        "diff_field_count": 55,
+        "module_change_hit_count": 5,
+        "field_changes": {}
+      },
+      {
+        "test_function_ident": "test/pkg:TestOperateReadInterface",
+        "test_function_name": "TestOperateReadInterface",
+        "baseline_failure": false,
+        "pass_regression": false,
+        "diff_field_count": 44,
+        "module_change_hit_count": 5,
+        "field_changes": {}
+      },
+      {
+        "test_function_ident": "test/pkg:TestOperateWriteCSV",
+        "test_function_name": "TestOperateWriteCSV",
+        "baseline_failure": false,
+        "pass_regression": false,
+        "diff_field_count": 37,
+        "module_change_hit_count": 5,
+        "field_changes": {}
+      },
+      {
+        "test_function_ident": "test/pkg:TestOperateWriteInterface",
+        "test_function_name": "TestOperateWriteInterface",
+        "baseline_failure": false,
+        "pass_regression": false,
+        "diff_field_count": 37,
+        "module_change_hit_count": 5,
+        "field_changes": {}
+      },
+      {
+        "test_function_ident": "test/pkg:TestRecursiveCSVSet",
+        "test_function_name": "TestRecursiveCSVSet",
+        "baseline_failure": false,
+        "pass_regression": false,
+        "diff_field_count": 154,
+        "module_change_hit_count": 5,
+        "field_changes": {}
+      },
+      {
+        "test_function_ident": "test/pkg:TestUpdateFail",
+        "test_function_name": "TestUpdateFail",
+        "baseline_failure": false,
+        "pass_regression": true,
+        "diff_field_count": 24,
+        "module_change_hit_count": 6,
+        "field_changes": {}
+      }
+    ]
+  }
+}
