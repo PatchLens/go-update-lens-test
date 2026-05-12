@@ -1,6 +1,6 @@
 module charts
 
-go 1.24.2
+go 1.25.0
 
 require (
 	github.com/go-analyze/charts v0.4.10
@@ -13,6 +13,6 @@ require (
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	golang.org/x/image v0.23.0 // indirect
+	golang.org/x/image v0.38.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
